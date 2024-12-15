@@ -13,3 +13,43 @@ html {
 body {
   min-height: 100%;
 }
+svg {
+  height: 2rem;
+  width: auto;
+}
+
+aside,
+main,
+header,
+div,
+article,
+nav,
+section {
+  /* outline: 2px solid rgb(255, 0, 0); */
+}
+
+.admin-page {
+  display: grid;
+  grid-template: 1fr 2fr 2fr / 1fr 3fr 1fr;
+}
+
+.header {
+  grid-area: 1 / 2 / 2 / 4;
+  /* background-color: red; */
+  padding: 1.5rem 2.5rem;
+}
+
+.sidebar-left {
+  grid-area: 1 / 1 / 4 / 2;
+  background-color: green;
+}
+
+.content {
+  grid-area: 2 / 2 / 4 / 3;
+  background-color: blue;
+}
+
+.sidebar-right {
+  grid-area: 2 / 3 / 4 / 4;
+  background-color: yellow;
+}
