@@ -9,8 +9,199 @@
 </head>
 
 <body>
-    <h1>Admin Dashboard</h1>
+    <div class="admin-page">
+        <!-- Header -->
+        <header class="header">
+            <section class="upper-section">
+                <div>
+                    <form class="header-search-bar" role="search" aria-label="Search">
+                        <button type="submit" aria-label="Search">
+                            <span class="icon"></span>
+                        </button>
+                        <input type="text" placeholder="Search..." aria-label="Search field">
+                    </form>
+                </div>
+                <div class="username-notification">
+                    <span class="icon">@</span>
+                    <img src="profile.jpg" alt="User Profile Picture">
+                    <p>Thor Odinson</p>
+                </div>
+            </section>
+            <section class="lower-section">
+                <div class="header-profile">
+                    <img src="profile.jpg" alt="User Profile Picture">
+                    <p>Hi there,</p>
+                    <h2>Thor Odinson <span>(@thor)</span></h2>
+                </div>
+                <div class="header-actions">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </section>
+        </header>
 
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar-left">
+            <nav class="sidebar-nav">
+                <h1>Dashboard</h1>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Home">Home</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Profile">Profile</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Messages">Messages</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to History">History</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Tasks">Tasks</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Communities">Communities</a>
+                    </li>
+                </ul>
+                <h2>Settings</h2>
+                <ul class="sidebar-list">
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Settings">Settings</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Support">Support</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <span class="icon"></span>
+                        <a href="#" aria-label="Go to Privacy">Privacy</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h3>Your Projects</h3>
+            <div class="projects">
+                <article class="project-card">
+                    <h4>Project #1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #4</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #5</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h4>Project #6</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <div class="project-card-actions">
+                        <button aria-label="Edit Project"><span class="icon"></span></button>
+                        <button aria-label="Delete Project"><span class="icon"></span></button>
+                        <button aria-label="Share Project"><span class="icon"></span></button>
+                    </div>
+                </article>
+            </div>
+        </main>
+
+        <!-- Sidebar with Announcements and Trending -->
+        <aside class="sidebar-right">
+            <section class="announcements">
+                <h4>Announcements</h4>
+                <article class="announcement">
+                    <h5>Title</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+                <article class="announcement">
+                    <h5>Title</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+                <article class="announcement">
+                    <h5>Title</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </article>
+            </section>
+            <section class="trending">
+                <h4>Trending</h4>
+                <div class="trending-item">
+                    <img src="user.jpg" alt="User avatar">
+                    <div>
+                        <h5>@user</h5>
+                        <p>Title</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="user.jpg" alt="User avatar">
+                    <div>
+                        <h5>@user</h5>
+                        <p>Title</p>
+                    </div>
+                </div>
+                <div class="trending-item">
+                    <img src="user.jpg" alt="User avatar">
+                    <div>
+                        <h5>@user</h5>
+                        <p>Title</p>
+                    </div>
+                </div>
+            </section>
+        </aside>
+    </div>
 </body>
 
 </html>
