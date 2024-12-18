@@ -184,7 +184,72 @@ section {
 
 .sidebar-left {
   grid-area: 1 / 1 / 4 / 2;
-  background-color: green;
+
+  background-color: rgb(0, 0, 0);
+
+  h2 {
+    color: white;
+  }
+
+  .sidebar-nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+  }
+
+  .sidebar-header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 5fr;
+    gap: 0.5rem;
+
+    .icon {
+      font-size: 3rem;
+      color: white;
+    }
+  }
+
+  ul {
+    display: grid;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 0.8rem;
+    align-items: center;
+
+    padding: 0.3rem 0.6rem;
+    border-left: 5px solid transparent;
+    border-radius: 0px 10px 10px 0px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      border-left: 5px solid rgb(77, 77, 77);
+      background-color: white;
+      a,
+      .icon {
+        color: black;
+      }
+    }
+  }
+
+  .icon {
+    color: white;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    grid-column: 2;
+    grid-row: 1;
+  }
 }
 
 .content {
