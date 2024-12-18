@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Admin Dashboard</title>
 </head>
@@ -13,25 +14,28 @@
         <!-- Header -->
         <header class="header">
             <section class="upper-section">
-                <div>
-                    <form class="header-search-bar" role="search" aria-label="Search">
-                        <button type="submit" aria-label="Search">
-                            <span class="icon"></span>
-                        </button>
-                        <input type="text" placeholder="Search..." aria-label="Search field">
-                    </form>
+                <div class="header-search-bar">
+                    <input type="text" placeholder="Search..." aria-label="Search field">
+                    <button type="submit" aria-label="Search" class="search-btn">
+                        <span class="icon mdi mdi-magnify"></span>
+                    </button>
                 </div>
                 <div class="username-notification">
-                    <span class="icon">@</span>
-                    <img src="profile.jpg" alt="User Profile Picture">
+                    <button>
+                        <span class="icon mdi mdi-weather-night"></span>
+                    </button>
+                    <span class="icon mdi mdi-bell-ring"></span>
+                    <img src="profile.jpg" alt="User Profile Picture" class="med profile-pic">
                     <p>Thor Odinson</p>
                 </div>
             </section>
             <section class="lower-section">
                 <div class="header-profile">
-                    <img src="profile.jpg" alt="User Profile Picture">
-                    <p>Hi there,</p>
-                    <h2>Thor Odinson <span>(@thor)</span></h2>
+                    <img src="profile.jpg" alt="User Profile Picture" class="lrg profile-pic">
+                    <div>
+                        <p>Hi there,</p>
+                        <h2>Thor Odinson <span>(@thor)</span></h2>
+                    </div>
                 </div>
                 <div class="header-actions">
                     <button>New</button>
@@ -179,21 +183,21 @@
             <section class="trending">
                 <h4>Trending</h4>
                 <div class="trending-item">
-                    <img src="user.jpg" alt="User avatar">
+                    <img src="profile.jpg" alt="User avatar" class="med profile-pic">
                     <div>
                         <h5>@user</h5>
                         <p>Title</p>
                     </div>
                 </div>
                 <div class="trending-item">
-                    <img src="user.jpg" alt="User avatar">
+                    <img src="profile.jpg" alt="User avatar" class="med profile-pic">
                     <div>
                         <h5>@user</h5>
                         <p>Title</p>
                     </div>
                 </div>
                 <div class="trending-item">
-                    <img src="user.jpg" alt="User avatar">
+                    <img src="profile.jpg" alt="User avatar" class="med profile-pic">
                     <div>
                         <h5>@user</h5>
                         <p>Title</p>
