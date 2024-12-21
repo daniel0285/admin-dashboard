@@ -1,3 +1,14 @@
+:root {
+  --card-clr: #f5f5f5;
+  --bg-clr: #e5e5e5;
+  --clr-3: #020617;
+  --clr-4: #a16207;
+  --clr-5: #030712;
+  --clr-6: #374151;
+
+  --transition: all 0.3s ease;
+}
+
 *,
 *::after,
 *::before {
@@ -16,10 +27,6 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
 }
-svg {
-  height: 2rem;
-  width: auto;
-}
 
 button {
   outline: none;
@@ -29,30 +36,16 @@ button {
   background: none;
   padding: 0.2rem 0.4rem;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 a {
   text-decoration: none;
 }
 
-p {
-  font-style: 1rem;
-}
-
-aside,
-main,
-header,
-div,
-article,
-nav,
-section {
-  /* outline: 2px solid rgb(255, 0, 0); */
-}
-
 .profile-pic {
   border-radius: 100%;
-  border: 2px solid black;
+  border: 2px solid var(--clr-5);
 }
 
 .lrg {
@@ -67,18 +60,19 @@ section {
 
 .icon {
   font-size: 1.8rem;
+  color: var(--clr-3);
 }
 
 .admin-page {
   display: grid;
   grid-template: 1fr 4fr / 1fr 3fr 1fr;
-  background-color: rgb(220, 220, 220);
+  background-color: var(--bg-clr);
 }
 
 .header {
   grid-area: 1 / 2 / 2 / 4;
   display: grid;
-  background-color: white;
+  background-color: var(--card-clr);
   gap: 1.5rem;
   padding: 1.5rem 2.5rem;
 
@@ -97,10 +91,10 @@ section {
     .icon:not(.mdi-magnify) {
       padding: 0.5rem 0.6rem;
       border-radius: 100%;
-      transition: all 0.3s ease;
+      transition: var(--transition);
       &:hover {
-        background-color: black;
-        color: white;
+        background-color: var(--clr-3);
+        color: var(--card-clr);
       }
     }
 
@@ -111,23 +105,27 @@ section {
 
       padding: 0.3rem 0.5rem;
       border-radius: 25px 0px 0px 25px;
+      color: var(--clr-3);
     }
 
     input[type="text"] {
       outline: none;
       appearance: none;
       border: 2px solid transparent;
-      background-color: rgb(223, 223, 223);
+      background-color: var(--bg-clr);
       border-radius: 30px;
       min-width: 100%;
       padding: 0.7rem 0.7rem 0.7rem 3.5rem;
       font-size: 1rem;
       transition: 0.3s ease;
       &:focus {
-        border: 2px solid black;
+        border: 2px solid var(--clr-3);
         & + button {
-          background-color: rgb(0, 0, 0);
-          color: white;
+          background-color: var(--clr-3);
+
+          .icon {
+            color: var(--card-clr);
+          }
         }
       }
     }
@@ -141,6 +139,7 @@ section {
 
     p {
       font-weight: bold;
+      color: var(--clr-5);
     }
   }
 
@@ -153,6 +152,7 @@ section {
       grid-template-columns: 1fr 7fr;
       gap: 0.5rem;
       align-items: center;
+      color: var(--clr-5);
     }
 
     .header-actions {
@@ -170,23 +170,23 @@ section {
         font-weight: bold;
         border-radius: 20px;
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: var(--transition);
         opacity: 0.8;
 
-        background-color: black;
-        color: white;
+        background-color: var(--clr-3);
+        color: var(--card-clr);
 
         &:hover {
           opacity: 1;
-          background-color: white;
-          color: black;
-          border: 2.5px solid black;
+          background-color: var(--card-clr);
+          color: var(--clr-3);
+          border: 2.5px solid var(--clr-3);
         }
 
         &:active {
           opacity: 1;
-          background-color: black;
-          color: white;
+          background-color: var(--clr-3);
+          color: var(--card-clr);
         }
       }
     }
@@ -195,10 +195,10 @@ section {
 
 .sidebar-left {
   grid-area: 1 / 1 / 3 / 2;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--clr-3);
 
   h2 {
-    color: white;
+    color: var(--card-clr);
   }
 
   .sidebar-nav {
@@ -216,7 +216,7 @@ section {
 
     .icon {
       font-size: 3rem;
-      color: white;
+      color: var(--card-clr);
     }
   }
 
@@ -238,25 +238,26 @@ section {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      border-left: 5px solid rgb(77, 77, 77);
-      background-color: white;
+      border-left: 5px solid var(--clr-4);
+      background-color: var(--card-clr);
+      font-weight: bold;
+
       a,
       .icon {
-        color: black;
+        color: var(--clr-4);
       }
     }
   }
 
   .icon {
-    color: white;
+    color: var(--card-clr);
     grid-column: 1;
     grid-row: 1;
   }
   a {
     text-decoration: none;
-    color: white;
+    color: var(--card-clr);
     font-size: 1rem;
-    font-weight: 500;
     grid-column: 2;
     grid-row: 1;
   }
@@ -264,12 +265,13 @@ section {
 
 .content {
   grid-area: 2 / 2 / 3 / 3;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
 
   h3 {
     padding: 0.2rem 0.6rem;
     margin-bottom: 1rem;
-    border-left: 5px dotted black;
+    border-left: 5px dotted var(--clr-3);
+    color: var(--clr-3);
   }
 
   h4 {
@@ -278,8 +280,10 @@ section {
   }
 
   p {
-    color: rgb(58, 58, 58);
+    color: var(--clr-6);
     line-height: 1.5;
+    opacity: 0.7;
+    transition: var(--transition);
   }
 
   .projects {
@@ -293,23 +297,31 @@ section {
     grid-template-rows: 2fr 1fr;
     align-items: center;
 
-    background-color: rgb(205, 205, 205);
-    border-left: 10px solid black;
+    background-color: var(--card-clr);
+    border-left: 10px solid var(--clr-3);
     border-radius: 6px;
     height: 100%;
     padding: 2.5rem 1.5rem 1rem 1.5rem;
-    transition: all 0.3s ease;
+    transition: var(--transition);
+
+    &:hover {
+      border-color: var(--clr-4);
+    }
   }
 
-  /* .projects:hover .project-card:not(:hover) {
-    opacity: 0.5;
-  } */
-
   a {
-    color: black;
+    display: inline-block;
+    color: var(--clr-3);
+    padding: 0.3rem;
 
     &:hover > h4 {
-      border-bottom: 3px solid black;
+      color: var(--clr-4);
+      border-bottom: 3px solid var(--clr-4);
+    }
+
+    &:hover > p {
+      opacity: 1;
+      color: var(--clr-3);
     }
   }
 
@@ -318,7 +330,7 @@ section {
     padding: 0.1rem;
     margin-bottom: 0.4rem;
     border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
+    transition: var(--transition);
   }
 
   .project-card-text {
@@ -344,7 +356,7 @@ section {
   }
 
   .sidebar-card {
-    background-color: rgb(205, 205, 205);
+    background-color: var(--card-clr);
     padding: 1.5rem;
     border-radius: 6px;
   }
@@ -353,7 +365,7 @@ section {
     padding: 1rem 0;
 
     &:not(:last-child) {
-      border-bottom: 2px solid grey;
+      border-bottom: 2px solid var(--clr-6);
     }
   }
 
@@ -374,11 +386,11 @@ section {
 
   p {
     line-height: 1.2rem;
-    color: rgb(58, 58, 58);
+    color: var(--clr-6);
   }
 
   span {
-    color: black;
+    color: var(--clr-5);
     font-weight: 500;
   }
 }
